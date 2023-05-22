@@ -80,6 +80,7 @@ public class ProductService {
 		System.out.println("3. Search by a product place");
 		System.out.println("4. Search for products that are out of warranty");
 		System.out.println("5. Display all the products");
+		System.out.println("6. Want to add a new product");
 		System.out.println("Please enter a key to proceed or 0 to exit");
 	}
 

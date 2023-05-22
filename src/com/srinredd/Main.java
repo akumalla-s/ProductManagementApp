@@ -84,7 +84,33 @@ public class Main {
 					System.out.println(product);
 				}
 
-			} else {
+			} else if(input.equals("6")) {
+				
+				System.out.println("Enter product name");
+				String productName = scanner.nextLine();
+				
+				System.out.println("Enter product type");
+				String productType = scanner.nextLine();
+				
+				System.out.println("Enter product place");
+				String productPlace = scanner.nextLine();
+				
+				System.out.println("Enter product warranty");
+				int warranty = 0;
+				try {
+					warranty = scanner.nextInt();
+				} catch (Exception e) {
+					System.out.println("It should a year in number format");
+					System.out.println("Product has not been added. Try again!");
+					continue;
+				}
+				
+				Product product = new Product(productName, productType, productPlace, warranty);
+				
+				service.addProduct(product);
+				System.out.println("Product has been added successfully!");
+				
+			}else {
 
 				System.out.println("Invalid Key");
 				System.out.println("Do you want to try again? Yes or No");
